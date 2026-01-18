@@ -1,2 +1,3 @@
 import streamlit as st
-st.write(st.session_state['breed'])
+if 'breed' in st.session_state:
+    st.write(st.session_state['breed'])

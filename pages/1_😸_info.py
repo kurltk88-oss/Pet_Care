@@ -5,7 +5,7 @@ import json
 from openai import OpenAI
 
 client = OpenAI(
-    api_key = st.secret['key']
+    api_key = st.secrets['key']
 )
 
 def get_standard_response(system_prompt, user_prompt):

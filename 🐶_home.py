@@ -121,4 +121,4 @@ with st.form("pet_form"):
         breed = st.selectbox('What is the breed of your cat',cat_breeds)
     submit = st.form_submit_button('Submit')
     if(submit):
-        st.switch_page('/1_😸_info.py')
+        st.switch_page('pages/1_😸_info.py')

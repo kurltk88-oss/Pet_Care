@@ -111,12 +111,10 @@ cat_breeds = [
     "York Chocolate"
 ]
 
-name = st.text_input("What is your name?")
 
 pet_species = st.selectbox('What kind of pet do you need help with?',['Dog','Cat'])
 
-with st.form():
-    st.write('Choose the breed of your pet ' + name)
+with st.form("pet_form"):
     if pet_species=='Dog':
         breed= st.selectbox('What is the breed of your dog',dog_breeds )
     elif pet_species=='Cat':

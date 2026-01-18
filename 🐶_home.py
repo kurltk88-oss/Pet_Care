@@ -116,8 +116,11 @@ name = st.text_input("What is your name?")
 pet_species = st.selectbox('What kind of pet do you need help with?',['Dog','Cat'])
 
 with st.form():
+    st.write('Choose the breed of your pet ' + name)
     if pet_species=='Dog':
         breed= st.selectbox('What is the breed of your dog',dog_breeds )
     elif pet_species=='Cat':
         breed = st.selectbox('What is the breed of your cat',cat_breeds)
-
+    submit = st.form_submit_button('Submit')
+    if(submit):
+        st.switch_page('/1_😸_info.py')

@@ -111,15 +111,27 @@ cat_breeds = [
     "Turkish Angora","Turkish Van","Ukrainian Levkoy",
     "York Chocolate"
 ]
+hamsters_gerbils = [
+    "Syrian Hamster",
+    "Campbells Dwarf Hamster",
+    "Winter White Dwarf Hamster",
+    "Roborovski Dwarf Hamster", 
+    "Chinese Hamster",
+    "Mongolian Gerbil",
+    "Fat-tailed Gerbil"
+]
 
 
-pet_species = st.selectbox('What kind of pet do you need help with?',['Dog','Cat'])
+
+pet_species = st.selectbox('What kind of pet do you need help with?',['Dog','Cat','Hamster/gerbil'])
 
 with st.form("pet_form"):
     if pet_species=='Dog':
         breed= st.selectbox('What is the breed of your dog',dog_breeds )
     elif pet_species=='Cat':
         breed = st.selectbox('What is the breed of your cat',cat_breeds)
+    elif pet_species=='Hamster/gerbil':
+        breed= st.selectbox('what is the breed of your hamster or gerbil',hamsters_gerbils)
     submit = st.form_submit_button('Submit')
 
     if(submit):

@@ -242,7 +242,8 @@ pet_birds = [
 fish = popular_freshwater_fish+popular_saltwater_fish
 
 pet_species = st.selectbox('What kind of pet do you need help with?',['Dog','Cat','Hamster/gerbil','fish','bird'])
-
+pet_name = st.text_input('Whats your pets name?')
+pet_age = st.text_input('What is your pets age?')
 with st.form("pet_form"):
     if pet_species=='Dog':
         breed= st.selectbox('What is the breed of your dog?',dog_breeds )
@@ -255,6 +256,8 @@ with st.form("pet_form"):
     elif pet_species=='bird':
         breed= st.selectbox('What breed of bird do you have?', pet_birds)
     submit = st.form_submit_button('Submit')
+
+    extra_info = st.text_area('Any extra questions, concerns, or information you need to add (like weight for example)?')
 
     if(submit):
         st.session_state['breed'] = breed

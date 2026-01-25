@@ -32,7 +32,7 @@ dog_breeds = [
     "Caucasian Shepherd Dog","Central Asian Shepherd Dog",
     "Cesky Terrier","Chesapeake Bay Retriever","Chihuahua",
     "Chinese Crested","Chinese Shar-Pei","Chinook","Chow Chow",
-    "Cirneco dell’Etna","Clumber Spaniel","Cocker Spaniel",
+    "Cirneco dell-Etna","Clumber Spaniel","Cocker Spaniel",
     "Collie","Coton de Tulear","Croatian Sheepdog",
     "Curly-Coated Retriever","Czechoslovakian Wolfdog",
     "Dachshund","Dalmatian","Dandie Dinmont Terrier",
@@ -172,20 +172,88 @@ popular_saltwater_fish = [
     "Pufferfish (Marine)",
     "Lionfish"
 ]
+pet_birds = [
+    "African Grey Parrot",
+    "Alexandrine Parakeet",
+    "Amazon Parrot",
+    "Australian King Parrot",
+    "Barred Parakeet",
+    "Blue-and-gold Macaw",
+    "Blue-crowned Conure",
+    "Bourkes Parakeet",
+    "Budgerigar",
+    "Button Quail",
+    "Caique",
+    "Canary",
+    "Cape Parrot",
+    "Cherry-headed Conure",
+    "Cockatiel",
+    "Cockatoo",
+    "Crimson Rosella",
+    "Diamond Dove",
+    "Double Yellow-headed Amazon",
+    "Dove (Ringneck)",
+    "Eclectus Parrot",
+    "Fancy Pigeon",
+    "Finch (Society)",
+    "Finch (Zebra)",
+    "Galah",
+    "Gouldian Finch",
+    "Green-cheeked Conure",
+    "Hahns Macaw",
+    "Hyacinth Macaw",
+    "Indian Ringneck Parakeet",
+    "Java Finch",
+    "Jenday Conure",
+    "Kakariki",
+    "Lineolated Parakeet",
+    "Lovebird",
+    "Macaw",
+    "Masked Lovebird",
+    "Meyers Parrot",
+    "Monk Parakeet (Quaker)",
+    "Pacific Parrotlet",
+    "Parrotlet",
+    "Peach-faced Lovebird",
+    "Peafowl",
+    "Pionus Parrot",
+    "Plum-headed Parakeet",
+    "Quail (Japanese)",
+    "Red-factor Canary",
+    "Red-lored Amazon",
+    "Rosella",
+    "Scarlet Macaw",
+    "Senegal Parrot",
+    "Severe Macaw",
+    "Silkie Chicken",
+    "Society Finch",
+    "Sun Conure",
+    "Timneh African Grey",
+    "Toucan (Captive-bred)",
+    "Umbrella Cockatoo",
+    "Victoria Crowned Pigeon",
+    "White-bellied Caique",
+    "Yellow-naped Amazon",
+    "Zebra Finch"
+]
+
+
 
 fish = popular_freshwater_fish+popular_saltwater_fish
 
-pet_species = st.selectbox('What kind of pet do you need help with?',['Dog','Cat','Hamster/gerbil','fish'])
+pet_species = st.selectbox('What kind of pet do you need help with?',['Dog','Cat','Hamster/gerbil','fish','bird'])
 
 with st.form("pet_form"):
     if pet_species=='Dog':
-        breed= st.selectbox('What is the breed of your dog',dog_breeds )
+        breed= st.selectbox('What is the breed of your dog?',dog_breeds )
     elif pet_species=='Cat':
-        breed = st.selectbox('What is the breed of your cat',cat_breeds)
+        breed = st.selectbox('What is the breed of your cat?',cat_breeds)
     elif pet_species=='Hamster/gerbil':
-        breed= st.selectbox('what is the breed of your hamster or gerbil',hamsters_gerbils)
+        breed= st.selectbox('what is the breed of your hamster or gerbil?',hamsters_gerbils)
     elif pet_species=='fish':
-        breed= st.selectbox('What type of fish do you have', fish)
+        breed= st.selectbox('What type of fish do you have?', fish)
+    elif pet_species=='bird':
+        breed= st.selectbox('What breed of bird do you have?', pet_birds)
     submit = st.form_submit_button('Submit')
 
     if(submit):

@@ -120,10 +120,62 @@ hamsters_gerbils = [
     "Mongolian Gerbil",
     "Fat-tailed Gerbil"
 ]
+popular_freshwater_fish = [
+    "Betta (Siamese Fighting Fish)",
+    "Goldfish",
+    "Guppy",
+    "Neon Tetra",
+    "Cardinal Tetra",
+    "Platy",
+    "Molly",
+    "Swordtail",
+    "Zebra Danio",
+    "Cherry Barb",
+    "Tiger Barb",
+    "Harlequin Rasbora",
+    "White Cloud Mountain Minnow",
+    "Angelfish",
+    "Discus",
+    "Corydoras Catfish",
+    "Pleco (Common Plecostomus)",
+    "Bristlenose Pleco",
+    "Otocinclus",
+    "Kuhli Loach",
+    "Clown Loach",
+    "Gourami (Dwarf, Pearl, Blue)",
+    "Ram Cichlid",
+    "African Cichlids (Mbuna, Peacock)",
+    "Oscar",
+    "Convict Cichlid",
+    "Rainbowfish",
+    "Killifish",
+    "Endlers Livebearer"
+]
+popular_saltwater_fish = [
+    "Clownfish",
+    "Blue Tang",
+    "Yellow Tang",
+    "Royal Gramma",
+    "Firefish Goby",
+    "Cleaner Wrasse",
+    "Mandarin Dragonet",
+    "Blenny",
+    "Gobies",
+    "Damsel Fish",
+    "Cardinalfish",
+    "Butterflyfish",
+    "Angelfish (Marine)",
+    "Foxface Rabbitfish",
+    "Wrasse",
+    "Hawkfish",
+    "Triggerfish",
+    "Pufferfish (Marine)",
+    "Lionfish"
+]
 
+fish = popular_freshwater_fish+popular_saltwater_fish
 
-
-pet_species = st.selectbox('What kind of pet do you need help with?',['Dog','Cat','Hamster/gerbil'])
+pet_species = st.selectbox('What kind of pet do you need help with?',['Dog','Cat','Hamster/gerbil','fish'])
 
 with st.form("pet_form"):
     if pet_species=='Dog':
@@ -132,6 +184,8 @@ with st.form("pet_form"):
         breed = st.selectbox('What is the breed of your cat',cat_breeds)
     elif pet_species=='Hamster/gerbil':
         breed= st.selectbox('what is the breed of your hamster or gerbil',hamsters_gerbils)
+    elif pet_species=='fish':
+        breed= st.selectbox('What type of fish do you have', fish)
     submit = st.form_submit_button('Submit')
 
     if(submit):

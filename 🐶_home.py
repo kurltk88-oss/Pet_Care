@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title='Home',page_icon="🐶")
 
-st.image("icon.png")
+st.image("icon.png",width=40)
 st.title("Pet-care")
 dog_breeds = [
     "Affenpinscher","Afghan Hound","Aidi","Airedale Terrier","Akbash",

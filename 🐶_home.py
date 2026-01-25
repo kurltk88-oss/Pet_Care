@@ -261,4 +261,5 @@ with st.form("pet_form"):
 
     if(submit):
         st.session_state['breed'] = breed
+        st.session_state['extra_info'] = extra_info
         st.switch_page('pages/1_😸_info.py')

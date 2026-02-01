@@ -33,7 +33,7 @@ def get_standard_response(system_prompt, user_prompt):
 if 'breed' in st.session_state:
     st.write('information about ' + st.session_state['breed'])
 
-    st.write(get_standard_response('You are veterinarian','Give me general care information for a'+ st.session_state['breed'] + '. Here is extra information provided by user (disregard if blank)' + st.session_state['extra_info']))
+    st.write(get_standard_response('You are veterinarian','The pets name is ' + st.session_state['name'] + ' they are ' + st.session_state['age'] + ' years old. Give me general care information for a'+ st.session_state['breed'] + '. Here is extra information provided by user (disregard this sentence if blank)' + st.session_state['extra_info']))
 
 
 

@@ -4,6 +4,8 @@ from openai import OpenAI
 import json
 from openai import OpenAI
 
+st.page_link("/workspaces/Pet_Care/🐶_home.py", label='Home',icon='🪹')
+
 client = OpenAI(
     api_key = st.secrets['key']
 )
